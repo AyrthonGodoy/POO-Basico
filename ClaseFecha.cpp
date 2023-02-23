@@ -24,6 +24,7 @@ Fecha::Fecha(int _dia, int _mes, int _anio){
     mes = _mes;
     anio = _anio;
 }
+//inicializamos el constructor 2
 Fecha::Fecha(long fecha){
     anio = int(fecha/10000); // Extraer el año
     mes = int((fecha - anio * 10000)/100); // Extraer mes
