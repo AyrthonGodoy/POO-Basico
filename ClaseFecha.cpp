@@ -13,6 +13,8 @@ class Fecha{
         Fecha(int, int, int);
         //Constructor 2
         Fecha(long);
+        //Destructor(sirve para eliminar objetos)
+        ~Fecha();
         //Metodos
         void MostrarFecha();
 };
@@ -31,6 +33,10 @@ Fecha::Fecha(long fecha){
     dia = int(fecha - anio *10000 - mes*100); //Extraer el dia
 
 }
+// Destructor
+Fecha::~Fecha(){
+
+}
 
 //Metodos 
 void Fecha::MostrarFecha(){
@@ -44,6 +50,7 @@ int main(){
     Fecha f2(20180109);
     f1.MostrarFecha();
     f2.MostrarFecha();
+    f2.~Fecha();//Destruyendo el objeto
     system("pause");
     return 0;
 }
